@@ -13,7 +13,7 @@ public class EstadoEncerrado implements EstadoEmprestimo{
 
     @Override
     public void restituir(Emprestimo emprestimo){
-        emprestimo.setEstado(new EstadoEncerrado());
+        throw new IllegalStateException("Não é possível restituir aquilo que já está ENCERRADO.");
     }
 
     @Override
