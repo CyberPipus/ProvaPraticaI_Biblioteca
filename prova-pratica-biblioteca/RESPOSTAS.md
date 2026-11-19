@@ -77,18 +77,28 @@ acervo central, e por que ela é um problema:**
 **O problema que ele resolve (descreva antes de nomear o padrão):**
 
 
+&emsp;&emsp;&emsp;Resolve a incompatibilidade de interfaces e formato de dados entre um cliente de alto nível e um serviço externo já existente ao permitir que as classes do sistema consumam dados por meio de um contrato limpo e baseado em objetos de domínio, "List<Exemplar>", convertendo a interface e a estrutura de dados primitiva da classe externa, "String[][]", em um único ponto isolado, sem necessidade de alterar o código-fonte do nosso serviço legado.
+
 **Nome do padrão:**
 
 
+&emsp;&emsp;&emsp;Padrão Estrutual Adaptador ("Adapter").
+
 **Alternativa descartada e por que ela não resolveria por completo:**
+
+&emsp;&emsp;&emsp;Alterar diretamente a classe "AcervoLegadoWS.java" porque: (1) em cenários reais, sistemas legados frequentemente pertencem a outras equipes ou terceiros e atendem a múltiplos outros sistemas institucionais, de modo que alterar a assinatura ou formato quebraria outros consumidores; e (2) mesmo corrigindo a letra minúscula no legado, as classes consumidoras continuariam acopladas à classe concreta e à estrutura matricial primitiva, mantendo as violações de DIP e SRP.
 
 
 ## Padrão aplicado ao Problema 2
 
 **O problema que ele resolve (descreva antes de nomear o padrão):**
 
+&emsp;&emsp;&emsp;O problema do comportamento de um objeto necessitar mudar quando seu estado interno muda, permitindo encapsular as regras de cada estado em classes separadas que respondem a uma interface comum. Elimina, assim, condicionais complexas espalhadas pelo contexto, tornando cada transição explícita, isolada e autoexplicativa na classe correspondente ao estado em questão.
 
 **Nome do padrão:**
 
+&emsp;&emsp;&emsp;Padrão Comportamental Estado ("State").
 
 **Alternativa descartada e por que ela não resolveria por completo:**
+
+&emsp;&emsp;&emsp;Substituir o atributo "String" por um "enum SituacaoEmprestimo". Todavia "enum" confere segurança de tipos durante a compilação, ele não resolveria o problema arquitetural pois as regras de transição continuariam espalhadas em condicionais dentro dos métodos de "Emprestimo.java". Assim, adicionar novos estados ainda exigiria alterar os métodos existentes, violando diretamente o OCP, e o ciclo de vida continuaria não sendo legível de forma isolada por fase.
