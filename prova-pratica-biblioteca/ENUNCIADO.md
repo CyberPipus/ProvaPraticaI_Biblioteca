@@ -186,9 +186,9 @@ valem nota** — a nota são as quatro etapas da Seção 5.
 
 ## 9. Antes de entregar, confira
 
-- [ ] `javac -encoding UTF-8 -d bin src/siga/*.java` compila sem erro.
-- [ ] `java -cp bin siga.Main` executa.
-- [ ] O brinde mostra **oito verdes**.
-- [ ] O `RESPOSTAS.md` está na raiz e **nenhum campo** das Etapas 1 e 4 ficou vazio.
-- [ ] O seu último `git push` foi aceito — confira o repositório no navegador.
-- [ ] Se a entrega for por Teams, o `.zip` está nomeado como `RA_Nome.zip`.
+- [X] `javac -encoding UTF-8 -d bin src/siga/*.java` compila sem erro.
+- [X] `java -cp bin siga.Main` executa.
+- [X] O brinde mostra **oito verdes**.
+- [X] O `RESPOSTAS.md` está na raiz e **nenhum campo** das Etapas 1 e 4 ficou vazio.
+- [X] O seu último `git push` foi aceito — confira o repositório no navegador.
+- [X] Se a entrega for por Teams, o `.zip` está nomeado como `RA_Nome.zip`.
